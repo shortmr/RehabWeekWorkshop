@@ -13,15 +13,15 @@ Most of the computers run on a local network, so if you need to search online we
 
 ## Python Instructions
 
-All the task will be in python, if you are not familiar with python here a list of helpfull commands:
+All the tasks will be in python. If you are not familiar with python here is a list of helpful commands:
   ```python
-    # for cycle has the following notation:
-    # where i is an index that goes from 0 to len(v) where len(v) is the dimension of a vector
-    for i in range(0, len(v)): # both for loop and if operator want : at the end and space in the next line
+    # for loops have the following notation:
+    # where i is an index that goes from 0 to len(v) and len(v) is the dimension of a vector
+    for i in range(0, len(v)): # for loops and if operators require a colon (:) at the end and a tab in the subsequent line
       if v[i] == N: # if operator, equal operator in python (==), to access element i of vector v[i]
-          L = v[i] # no ; needed
+          L = v[i] # no semi-colon (;) needed at the end of lines
     # numpy array:
-    v = np.array([1, 2, 4,3])
+    v = np.array([1, 2, 4, 3])
     # to have size of single dimension array
     v.shape[0]
   ```
@@ -29,7 +29,7 @@ All the task will be in python, if you are not familiar with python here a list 
 
 ## Start Robot Node 
 
-Understand you team name: 
+Understand your team name: 
 **The team name should be handwritten on the upper part of the screen, this will be the name of your paddle across the whole workshop. 
 IMPORTANT: Don't confuse it with other names.**
 
@@ -42,7 +42,7 @@ roslaunch CORC m1_real_A.launch
 ```
 At this point you should see something like:
 ![Screenshot of the terminal after running the robot node.](imgs_readme/terminalRobotNode.png)
-If this is not the case (any red part raise your hand).
+If this is not the case (any red error messages) raise your hand.
 
 Now try to move the robot. You should feel a lot of resistance because no torque compensation is provided by the motor. 
 
@@ -54,7 +54,7 @@ The GUI should be similar to this one:
 
 If you click on the name of your team on the left of the GUI, the following interface should open.
 
-At this point, click on the dropdown labeled "Controller mode" and switch to transparent mode. 
+At this point, click on the dropdown labeled "Controller mode" and switch to transparency mode. 
 
 ![Screenshot of the GUI.](imgs_readme/transparency.png)
 
@@ -79,7 +79,7 @@ These plots display:
 
 For this first task, the desired interaction force is zero. If you press play, you should only see the joint angles of all four robots. 
 
-## Task 1: Implement water viscousity when paddle contact with water
+## Task 1: Implement water viscosity when paddle contact with water
 
 ![Water Viscousity](imgs_readme/waterviscousity.webp)
 
@@ -114,7 +114,7 @@ we would like you to implement a viscous force that is designed in this way:
 
 $$\large F = - D_{vis} \dot{\theta} \text{ for } \dot{\theta} \leq 0 \wedge \theta \leq 0 $$
 
-Now save the script (```sh ctrl + s```) and go back on the terminal. 
+Now save the script (```ctrl + s```) and go back on the terminal. 
 In a second terminal (bottom one) if you use your up-arrow you should find and run the following command line:
 
 ```sh
